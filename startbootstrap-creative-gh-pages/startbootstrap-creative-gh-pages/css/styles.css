@@ -253,6 +253,24 @@ a:hover {
   color: var(--bs-link-hover-color);
 }
 
+.page-section .portfolio-box,
+.page-section .p-3.rounded-3,
+.page-section .page-section-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.page-section .portfolio-box:hover,
+.page-section .p-3.rounded-3:hover,
+.page-section .page-section-card:hover {
+  transform: scale(1.03);
+  z-index: 1;
+  box-shadow: 0 1rem 1.5rem rgba(33, 37, 41, 0.12);
+}
+
+.page-section .portfolio-box:hover img,
+.page-section .p-3.rounded-3:hover img {
+  transform: scale(1.02);
+}
+
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
