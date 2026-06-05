@@ -11036,3 +11036,11 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+    .solution-item {
+                transition: transform 0.3s ease-in-out;
+                padding: 1rem;
+                border-radius: 0.5rem;
+            }
+            .solution-item:hover {
+                transform: scale(1.1);
+            }
