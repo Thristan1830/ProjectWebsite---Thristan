@@ -56,4 +56,20 @@ window.addEventListener('DOMContentLoaded', event => {
         elements: '#portfolio a.portfolio-box'
     });
 
+    // Set the FormSubmit redirect back to the current page with a success flag
+    const nextField = document.getElementById('form-next');
+    if (nextField) {
+        const currentUrl = window.location.href.split('?')[0].split('#')[0];
+        nextField.value = `${currentUrl}?success=1#contact`;
+    }
+
+    const successMessage = document.getElementById('form-success-message');
+    const urlParams = new URLSearchParams(window.location.search);
+    if (successMessage && urlParams.get('success') === '1') {
+        successMessage.classList.remove('d-none');
+        successMessage.classList.add('show');
+        const cleanedUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}#contact`;
+        window.history.replaceState({}, document.title, cleanedUrl);
+    }
+
 });
